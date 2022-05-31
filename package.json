@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/MICHAELMUNAVU83/new-todolist/issues"
   },
-  "homepage": "https://github.com/MICHAELMUNAVU83/new-todolist#readme"
+  "homepage": "https://github.com/MICHAELMUNAVU83/new-todolist#readme",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
 }
