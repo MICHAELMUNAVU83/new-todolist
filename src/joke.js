@@ -1,2 +1,2 @@
-let up = console.log(56)
-export default up
+const up = console.log(56);
+export default up;
