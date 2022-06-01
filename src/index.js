@@ -1,43 +1,27 @@
 import './styles/main.css';
 
-const divEl = document.querySelector('.task-ul');
-
-const todos = [
+const tasks = [
   {
-    description: 'Creating a frontend project',
-    completed: false,
+    description: 'wash the dishes',
+    completed: true,
     index: 1,
   },
   {
-    description: 'Baking cakes',
-    completed: false,
+    description: 'complete to do list',
+    completed: true,
     index: 2,
-  },
-  {
-    description: 'Reading about local storage',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Cleaning the house',
-    completed: false,
-    index: 4,
   },
 ];
 
-todos.forEach((todo) => {
-  const div = document.createElement('div');
-  div.classList.add('todo-div');
-  div.innerHTML = `
-    <div>
-      <input type="checkbox" id="${todo.index}" />
-      </div>
-      <div>
-      <p contenteditable="true">${todo.description}</p>
-      </div>
-      <div>
-      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-      </div>
+tasks.forEach((task) => {
+  const holdingtask = document.createElement('div');
+  holdingtask.classList.add('eachtask');
+  holdingtask.innerHTML += `
+      
+                  <input type="checkbox" name="name">${task.description}<i
+                          class="fa-solid fa-ellipsis-vertical"></i>
+          
+      
       `;
-  divEl.appendChild(div);
+  document.getElementById('tasklist').appendChild(holdingtask);
 });
