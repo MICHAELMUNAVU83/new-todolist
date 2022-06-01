@@ -1,0 +1,54 @@
+.eachtask {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+#taskinput {
+  width: 92.5%;
+  border: none;
+  height: 25px;
+}
+
+.inputdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1.5px solid black;
+}
+
+.inputdiv i {
+  margin-top: 10px;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.headingDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1.5px solid black;
+}
+
+#headingi {
+  margin-top: 15px;
+}
+
+.clearall {
+  margin-top: 2px;
+  width: 100%;
+  background-color: white;
+  border: none;
+  height: 40px;
+  font-size: large;
+}
+
+.main {
+  width: 30%;
+  margin-left: 40%;
+  margin-right: 25%;
+}
