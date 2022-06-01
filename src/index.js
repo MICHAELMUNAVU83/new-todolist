@@ -1,39 +1,43 @@
 import './styles/main.css';
-import tasks from './joke.js';
 
-const heading = document.querySelector('.heading');
+const divEl = document.querySelector('.task-ul');
 
-heading.innerHTML = `
-  <div class="headingDiv">
-                  <p>Today's To Do</p>
-                  <i class="fa-solid fa-arrows-rotate"></i>
-                
-              </div>
-              
-              <div class="inputdiv">
-                  <input id="taskinput" type="text" placeholder="Add to your list">
-                
-                  <i class="fa-solid fa-arrow-right-to-bracket"></i>
-  
-              </div>
-  
-  
-  `;
+const todos = [
+  {
+    description: 'Creating a frontend project',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Baking cakes',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Reading about local storage',
+    completed: false,
+    index: 3,
+  },
+  {
+    description: 'Cleaning the house',
+    completed: false,
+    index: 4,
+  },
+];
 
-tasks.forEach((task) => {
-  const holdingtask = document.createElement('div');
-  holdingtask.classList.add('eachtask');
-  holdingtask.innerHTML += `
-      
-                  <input type="checkbox" name="name">${task.description}<i
-                          class="fa-solid fa-ellipsis-vertical"></i>
-          
-      
+todos.forEach((todo) => {
+  const div = document.createElement('div');
+  div.classList.add('todo-div');
+  div.innerHTML = `
+    <div>
+      <input type="checkbox" id="${todo.index}" />
+      </div>
+      <div>
+      <p contenteditable="true">${todo.description}</p>
+      </div>
+      <div>
+      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </div>
       `;
-  document.getElementById('tasklist').appendChild(holdingtask);
+  divEl.appendChild(div);
 });
-document.querySelector('.clear').innerHTML = `
-  <button class="clearall">Clear all complted</button>
-  
-  
-  `;
