@@ -1,2 +1,4 @@
 import './styles/main.css';
-console.log('lala')
+import lala from './joke.js';
+
+console.log(lala);
