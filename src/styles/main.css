@@ -1,3 +1,51 @@
-h1 {
-  color: red;
+.eachtask {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+#taskinput {
+  width: 93.5%;
+  border: none;
+  height: 25px;
+}
+
+.inputdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1.5px solid black;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.headingDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1.5px solid black;
+}
+
+.headingDiv i {
+  margin-top: 15px;
+}
+
+.clearall {
+  margin-top: 2px;
+  width: 100%;
+  background-color: white;
+  border: none;
+  height: 40px;
+  font-size: large;
+}
+
+.main {
+  width: 30%;
+  padding-left: 35%;
+  padding-right: 25%;
+  padding-top: 10%;
 }
