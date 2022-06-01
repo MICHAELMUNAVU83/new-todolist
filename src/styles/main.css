@@ -19,6 +19,10 @@
   border-bottom: 1.5px solid black;
 }
 
+.inputdiv i {
+  margin-top: 10px;
+}
+
 body {
   background-color: whitesmoke;
 }
@@ -30,7 +34,7 @@ body {
   border-bottom: 1.5px solid black;
 }
 
-.headingDiv i {
+#headingi {
   margin-top: 15px;
 }
 
@@ -41,4 +45,10 @@ body {
   border: none;
   height: 40px;
   font-size: large;
+}
+
+.main {
+  width: 30%;
+  margin-left: 40%;
+  margin-right: 25%;
 }

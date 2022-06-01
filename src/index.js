@@ -18,9 +18,8 @@ tasks.forEach((task) => {
   holdingtask.classList.add('eachtask');
   holdingtask.innerHTML += `
       
-                  <input type="checkbox" name="name">${task.description}<i
-                          class="fa-solid fa-ellipsis-vertical"></i>
-          
+                  <input type="checkbox" name="name">${task.description}  <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                         
       
       `;
   document.getElementById('tasklist').appendChild(holdingtask);
