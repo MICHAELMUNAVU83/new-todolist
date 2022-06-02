@@ -1,4 +1,4 @@
-/*styleint-disable*/
+/* styleint-disable */
 .eachtask {
   display: flex;
   flex-direction: row;
@@ -58,4 +58,5 @@ body {
 .main {
   background-color: white;
 }
-/*styleint-enable*/
+
+/* styleint-enable */
