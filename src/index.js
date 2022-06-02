@@ -11,92 +11,90 @@ class TaskBook {
 }
 let addl = document.getElementById("taskadd")
 
-addl.addEventListener("click", function(){
-  alert(12)
-})
-// addl.addEventListener("click", function () {
-//   let taskel = document.getElementById("taskinput").value;
-//   let newtask = new TaskBook(taskel, false, storedtasks.length);
-//   var holdingtask = document.createElement("div");
 
-//   holdingtask.classList.add("eachtask");
-//   holdingtask.innerHTML = `
-//   <input class="inputcheck" type="checkbox"><p class= "taskp" contenteditable="true">${newtask.taskname}</p>
-//   <div>
-//       <ion-icon  name="ellipsis-vertical-outline"></ion-icon><ion-icon class ="${newtask.id}" id="delbtn" name="trash-outline">del</ion-icon>
+addl.addEventListener("click", function () {
+  let taskel = document.getElementById("taskinput").value;
+  let newtask = new TaskBook(taskel, false, storedtasks.length);
+  var holdingtask = document.createElement("div");
 
-//   </div>
+  holdingtask.classList.add("eachtask");
+  holdingtask.innerHTML = `
+  <input class="inputcheck" type="checkbox"><p class= "taskp" contenteditable="true">${newtask.taskname}</p>
+  <div>
+      <ion-icon  name="ellipsis-vertical-outline"></ion-icon><ion-icon class ="${newtask.id}" id="delbtn" name="trash-outline">del</ion-icon>
+
+  </div>
 
 
      
                      
       
-//       `;
-//   document.getElementById("tasklist").appendChild(holdingtask);
-//   storedtasks.push(newtask);
-//   localStorage.setItem("tasks", JSON.stringify(storedtasks));
-//   document.getElementById("taskinput").value = "";
-//   function changeContent() {
-//     let taskp = document.querySelectorAll(".taskp");
+      `;
+  document.getElementById("tasklist").appendChild(holdingtask);
+  storedtasks.push(newtask);
+  localStorage.setItem("tasks", JSON.stringify(storedtasks));
+  document.getElementById("taskinput").value = "";
+  function changeContent() {
+    let taskp = document.querySelectorAll(".taskp");
 
-//     taskp.forEach((item) => {
-//       let previous = item.textContent;
-//       item.addEventListener("keydown", function (e) {
-//         if (e.key === "Enter") {
-//           e.preventDefault();
-//           let newcontent = item.textContent;
-//           console.log(newcontent);
-//           const bla = storedtasks.filter((todo) => todo.taskname === previous);
-//           storedtasks[bla[0].index].taskname = newcontent;
-//           previous = newcontent;
-//           localStorage.setItem("tasks", JSON.stringify(storedtasks));
-//         }
-//       });
-//     });
-//   }
-//   changeContent();
-// });
+    taskp.forEach((item) => {
+      let previous = item.textContent;
+      item.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          let newcontent = item.textContent;
+          console.log(newcontent);
+          const bla = storedtasks.filter((todo) => todo.taskname === previous);
+          storedtasks[bla[0].index].taskname = newcontent;
+          previous = newcontent;
+          localStorage.setItem("tasks", JSON.stringify(storedtasks));
+        }
+      });
+    });
+  }
+  changeContent();
+});
 
-// document.getElementById("tasklist").addEventListener("click", function (e) {
-//   if (e.target.innerHTML == "del") {
-//     e.target.parentElement.parentElement.remove();
-//     storedtasks.forEach((storedtask, i) => {
-//       if (
-//         e.target.parentElement.lastElementChild.classList.contains(
-//           storedtask.id
-//         )
-//       ) {
-//         storedtasks.splice(i, 1);
-//       }
-//       for (let i = 0; i < storedtasks.length; i++) {
-//         storedtasks[i].index = i;
-//       }
+document.getElementById("tasklist").addEventListener("click", function (e) {
+  if (e.target.innerHTML == "del") {
+    e.target.parentElement.parentElement.remove();
+    storedtasks.forEach((storedtask, i) => {
+      if (
+        e.target.parentElement.lastElementChild.classList.contains(
+          storedtask.id
+        )
+      ) {
+        storedtasks.splice(i, 1);
+      }
+      for (let i = 0; i < storedtasks.length; i++) {
+        storedtasks[i].index = i;
+      }
 
-//       localStorage.setItem("tasks", JSON.stringify(storedtasks));
-//     });
-//   }
+      localStorage.setItem("tasks", JSON.stringify(storedtasks));
+    });
+  }
 
-//   e.preventDefault();
-// });
+  e.preventDefault();
+});
 
-// window.addEventListener("load", function () {
-//   const preservedTasks = JSON.parse(localStorage.getItem("tasks"));
-//   preservedTasks.forEach((preservedTask) => {
-//     var holdingtask = document.createElement("div");
+window.addEventListener("load", function () {
+  const preservedTasks = JSON.parse(localStorage.getItem("tasks"));
+  preservedTasks.forEach((preservedTask) => {
+    var holdingtask = document.createElement("div");
 
-//     holdingtask.classList.add("eachtask");
-//     holdingtask.innerHTML = `
-//     <input class="inputcheck" type="checkbox"><p class= "taskp" contenteditable="true">${preservedTask.taskname}</p>
-//     <div>
-//         <ion-icon  name="ellipsis-vertical-outline"></ion-icon><ion-icon class ="${preservedTask.id}" id="delbtn" name="trash-outline">del</ion-icon>
+    holdingtask.classList.add("eachtask");
+    holdingtask.innerHTML = `
+    <input class="inputcheck" type="checkbox"><p class= "taskp" contenteditable="true">${preservedTask.taskname}</p>
+    <div>
+        <ion-icon  name="ellipsis-vertical-outline"></ion-icon><ion-icon class ="${preservedTask.id}" id="delbtn" name="trash-outline">del</ion-icon>
   
-//     </div>
+    </div>
   
   
        
                        
         
-//         `;
-//     document.getElementById("tasklist").appendChild(holdingtask);
-//   });
-// });
+        `;
+    document.getElementById("tasklist").appendChild(holdingtask);
+  });
+});
