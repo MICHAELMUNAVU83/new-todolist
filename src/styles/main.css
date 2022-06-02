@@ -1,13 +1,21 @@
+/* styleint-disable */
 .eachtask {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid black;
-  border-top: 1px solid black;
+}
+
+.inputcheck {
+  margin-top: 15px;
+}
+
+#delbtn {
+  margin-top: 15px;
 }
 
 #taskinput {
-  width: 92.5%;
+  width: 93.5%;
   border: none;
   height: 25px;
 }
@@ -19,11 +27,11 @@
   border-bottom: 1.5px solid black;
 }
 
-.inputdiv i {
-  margin-top: 10px;
-}
-
 body {
+  width: 30%;
+  padding-left: 35%;
+  padding-right: 25%;
+  padding-top: 10%;
   background-color: whitesmoke;
 }
 
@@ -34,7 +42,7 @@ body {
   border-bottom: 1.5px solid black;
 }
 
-#headingi {
+.headingDiv i {
   margin-top: 15px;
 }
 
@@ -48,7 +56,7 @@ body {
 }
 
 .main {
-  width: 30%;
-  margin-left: 40%;
-  margin-right: 25%;
+  background-color: white;
 }
+
+/* styleint-enable */
