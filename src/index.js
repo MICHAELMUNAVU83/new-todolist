@@ -1,2 +1,2 @@
 import './styles/main.css';
-import './add-and-remove.js';
+import './interactive.js';
