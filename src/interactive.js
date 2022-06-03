@@ -1,5 +1,3 @@
-/*eslint-disable*/
-/* eslint-disable no-plusplus */
 const clearBtn = document.querySelector('.clear-completed');
 
 let todos = JSON.parse(localStorage.getItem('todo-list')) || [];
@@ -95,7 +93,7 @@ function deleteFunc() {
     item.addEventListener('click', (e) => {
       const divVar = e.target.parentElement.previousElementSibling.textContent.trim();
       todos = todos.filter((todo) => todo.name !== divVar);
-      for (let i = 0; i < todos.length; i++) {
+      for (let i = 0; i < todos.length; i += 1) {
         todos[i].index = i + 1;
       }
       const deletedItem = item.parentElement.parentElement;
@@ -142,7 +140,7 @@ function deleteCompleted() {
     }
   });
   todos = todos.filter((todo) => todo.completed !== true);
-  for (let i = 0; i < todos.length; i++) {
+  for (let i = 0; i < todos.length; i += 1) {
     todos[i].index = i + 1;
   }
   localStorage.setItem('todo-list', JSON.stringify(todos));
@@ -151,5 +149,3 @@ function deleteCompleted() {
 clearBtn.addEventListener('click', () => {
   deleteCompleted();
 });
-
-/* eslint-enable */
